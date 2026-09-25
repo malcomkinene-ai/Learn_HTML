@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Semantic Elements</title>
+</head>
+<body>
+  <!-- header introduces the page or a section, commonly containing its title. -->
+  <header>
+    <h1>Understanding Semantic HTML</h1>
+    <p>Learn how meaningful elements make a webpage easier to understand.</p>
+  </header>
+
+  <!-- nav groups the page's major navigation links. -->
+  <nav aria-label="Main navigation">
+    <a href="#article">Article</a>
+    <a href="#features">Features</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- main contains the primary, unique content of the page. -->
+  <main>
+    <!-- article is a self-contained composition that could stand on its own. -->
+    <article id="article">
+      <header>
+        <h2>What Is Semantic HTML?</h2>
+        <p>Published <time datetime="2025-01-15">January 15, 2025</time></p>
+      </header>
+
+      <p>Semantic HTML uses elements that describe the meaning and purpose of their content, rather than its appearance.</p>
+
+      <!-- figure groups illustrative content; figcaption provides its caption. -->
+      <figure>
+        <pre><code>&lt;main&gt;Primary page content&lt;/main&gt;</code></pre>
+        <figcaption>A simple example of a semantic element.</figcaption>
+      </figure>
+
+      <!-- section groups related content under a descriptive heading. -->
+      <section id="features">
+        <h3>Why Use Semantic Elements?</h3>
+        <ul>
+          <li>They give browsers and assistive technologies clearer structure.</li>
+          <li>They make source code easier for people to read and maintain.</li>
+          <li>They help search engines understand the organization of a page.</li>
+        </ul>
+      </section>
+
+      <!-- details provides a disclosure widget; summary is its visible label. -->
+      <details>
+        <summary>See another semantic element</summary>
+        <p><code>&lt;address&gt;</code> represents contact information for a person or organization.</p>
+      </details>
+    </article>
+
+    <!-- aside holds complementary content related to the main content. -->
+    <aside>
+      <h2>Quick Tip</h2>
+      <p>Choose an element for what its content means, not for how it looks.</p>
+    </aside>
+  </main>
+
+  <!-- footer contains closing information for the page or its nearest section. -->
+  <footer id="contact">
+    <address>Questions? Email <a href="mailto:hello@example.com">hello@example.com</a>.</address>
+    <p><small>&copy; 2025 Semantic HTML Guide</small></p>
+  </footer>
+</body>
+</html>
