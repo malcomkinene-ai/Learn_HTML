@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML Forms Lesson</title>
+</head>
+<body>
+	<h1>Contact Form</h1>
+	<p>Fill out this form to send a message.</p>
+
+	<!-- The form element groups controls and sends their values to a server. -->
+	<!-- Inline note: action is the destination; method="post" sends data privately in the request body. -->
+	<form action="/submit" method="post">
+		<!-- A fieldset groups related controls, making the form easier to understand. -->
+		<fieldset>
+			<!-- The legend gives the fieldset a descriptive heading. -->
+			<legend>Your details</legend>
+
+			<!-- A label describes an input. Its 'for' value must match the input's 'id'. -->
+			<label for="full-name">Full name:</label>
+			<!-- Inline note: type="text" creates a single-line text box; name identifies the submitted value. -->
+			<input type="text" id="full-name" name="full_name" placeholder="Jane Doe" required>
+			<br><br>
+
+			<!-- type="email" helps browsers check that the entry looks like an email address. -->
+			<label for="email">Email address:</label>
+			<input type="email" id="email" name="email" placeholder="jane@example.com" required>
+			<br><br>
+
+			<!-- type="tel" is useful for phone numbers and can show a phone keypad on mobile devices. -->
+			<label for="phone">Phone number:</label>
+			<input type="tel" id="phone" name="phone" placeholder="555-123-4567">
+			<br><br>
+
+			<!-- A label can describe a group of radio buttons; only one option in the group can be selected. -->
+			<span>Preferred contact method:</span><br>
+			<input type="radio" id="contact-email" name="contact_method" value="email" checked>
+			<label for="contact-email">Email</label>
+			<input type="radio" id="contact-phone" name="contact_method" value="phone">
+			<label for="contact-phone">Phone</label>
+			<br><br>
+
+			<!-- A select creates a drop-down list; option elements provide its choices. -->
+			<label for="topic">Message topic:</label>
+			<select id="topic" name="topic">
+				<option value="question">Question</option>
+				<option value="feedback">Feedback</option>
+				<option value="support">Support</option>
+			</select>
+			<br><br>
+
+			<!-- textarea creates a multi-line text box; rows and cols suggest its starting size. -->
+			<label for="message">Message:</label><br>
+			<textarea id="message" name="message" rows="5" cols="40" placeholder="Write your message here..." required></textarea>
+			<br><br>
+
+			<!-- A checkbox represents a yes/no choice. The user must agree before submitting. -->
+			<input type="checkbox" id="agreement" name="agreement" required>
+			<label for="agreement">I agree to be contacted.</label>
+			<br><br>
+
+			<!-- type="submit" creates the button that sends the form data. -->
+			<button type="submit">Send message</button>
+			<!-- type="reset" clears the controls and restores their initial values. -->
+			<button type="reset">Clear form</button>
+		</fieldset>
+	</form>
+</body>
+</html>
