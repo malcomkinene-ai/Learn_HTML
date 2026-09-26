@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding HTML Tables</title>
+</head>
+<body>
+  <h1>Understanding HTML Tables</h1>
+  <p>Tables present related data in rows and columns. Use them for data, not page layout.</p>
+
+  <table>
+    <!-- caption gives the table a descriptive title. -->
+    <caption>Fruit inventory</caption>
+
+    <!-- colgroup groups columns; col represents a column or set of columns. -->
+    <colgroup>
+      <col>
+      <col span="2">
+    </colgroup>
+
+    <!-- thead contains the column headings. -->
+    <thead>
+      <!-- tr creates a table row. -->
+      <tr>
+        <!-- th is a header cell; scope identifies what it labels. -->
+        <th scope="col">Fruit</th>
+        <th scope="col">In stock</th>
+        <th scope="col">Price per kg</th>
+      </tr>
+    </thead>
+
+    <!-- tbody contains the main table data. -->
+    <tbody>
+      <tr>
+        <th scope="row">Apples</th>
+        <!-- td is an ordinary data cell. -->
+        <td>12</td>
+        <td>$3</td>
+      </tr>
+      <tr>
+        <th scope="row">Pears</th>
+        <td>8</td>
+        <td>$4</td>
+      </tr>
+    </tbody>
+
+    <!-- tfoot contains summary information for the table. -->
+    <tfoot>
+      <tr>
+        <!-- colspan makes this cell span two columns. -->
+        <th scope="row" colspan="2">Items listed</th>
+        <td>2 types</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <h2>Elements and cell attributes</h2>
+  <p>
+    Table elements include <code>table</code>, <code>caption</code>,
+    <code>colgroup</code>, <code>col</code>, <code>thead</code>,
+    <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code>,
+    and <code>td</code>. The <code>rowspan</code> and <code>colspan</code>
+    attributes let a cell cover multiple rows or columns; they are attributes,
+    not elements.
+  </p>
+</body>
+</html>
